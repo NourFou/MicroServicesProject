@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.Services.ServiceCompte;
 import com.exemple.entities.BO;
 import com.exemple.entities.Compte;
+import com.exemple.entities.Releve;
 
 @RestController
 @RequestMapping(value = "/Comptes")
@@ -24,6 +25,10 @@ public class CompteController {
 	@RequestMapping(method = RequestMethod.GET, value = "/allComptes/{idAbonne}")
 	public List<Compte> FindAllComptes(@PathVariable int idAbonne) {
 		return serviceCompte.FindAllComptes(idAbonne);
+    }
+	@RequestMapping(method = RequestMethod.GET, value = "/allOperations/{id}")
+	public List<Releve> ListDebitCredit(@PathVariable int id) {
+		return serviceCompte.ListDebitCredit(id);
     }
 
 }

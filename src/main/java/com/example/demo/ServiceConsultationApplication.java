@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 import com.example.repositories.AbonneRepository;
@@ -25,8 +26,8 @@ import com.exemple.entities.Carte;
 import com.exemple.entities.Compte;
 
 @SpringBootApplication
-@EnableMongoRepositories(basePackageClasses = AgenceRepository.class)
-//@EnableAutoConfiguration(exclude= {ErrorMvcAutoConfiguration.class})
+@EnableMongoRepositories(basePackageClasses = CarteRepository.class)
+
 
 public class ServiceConsultationApplication {
 
